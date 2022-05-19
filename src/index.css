@@ -14,6 +14,7 @@
   --clr-g-start: #4d5bce;
   --clr-g-end: #43d9ad;
   --clr-lines: #1e2d3d;
+  --clr-text: #e5e9f0;
 
   --ff-fira: 'Fira Code', monospace;
 }
@@ -70,6 +71,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: var(--clr-white);
+  background: var(--clr-Maastricht);
   scroll-behavior: smooth;
 }
 
@@ -125,6 +127,37 @@ input[type='reset'] {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Utility classes */
+
+.hidden {
+  display: none !important;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
 }
 
 .btn {
