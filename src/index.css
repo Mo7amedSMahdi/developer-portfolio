@@ -1,1 +1,218 @@
-/* styleSheet */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --clr-rich-black: #01080e;
+  --clr-Maastricht: #011627;
+  --clr-slate-gray: #607b96;
+  --clr-zomp: #3c9d93;
+  --clr-iris: #4d5bce;
+  --clr-white: #ffffff;
+  --clr-rajah: #fea55f;
+  --clr-eucalyptus: #43d9ad;
+  --clr-dark-salmon: #e99287;
+  --clr-bright-lavender: #c98bdf;
+  --clr-g-start: #4d5bce;
+  --clr-g-end: #43d9ad;
+  --clr-lines: #1e2d3d;
+  --clr-text: #e5e9f0;
+
+  --ff-fira: 'Fira Code', monospace;
+}
+
+/* RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default link style */
+a {
+  color: unset;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  font-family: var(--ff-fira);
+  font-style: normal;
+  font-weight: 450;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: var(--clr-white);
+  background: var(--clr-Maastricht);
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/* Remove default button styles */
+button,
+input[type='submit'],
+input[type='reset'] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility classes */
+
+.hidden {
+  display: none !important;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.625rem 0.875rem;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 0.875rem;
+  line-height: 1.063rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.btn-primary {
+  color: var(--clr-rich-black);
+  background: var(--clr-rajah);
+}
+
+.btn-primary:hover {
+  background: #ffac6b;
+}
+
+.btn--default {
+  color: var(--clr-white);
+}
+
+.btn--default:hover {
+  background: var(--clr-slate-gray);
+}
+
+.btn--outline {
+  color: var(--clr-white);
+  border: 1px solid var(--clr-white);
+}
+
+.btn--outline:hover {
+  opacity: 0.5;
+}
+
+.headline {
+  font-size: 3.875rem;
+  line-height: 4.75rem;
+}
+
+.subheadline {
+  font-size: 2rem;
+  line-height: 2.438rem;
+}
+
+.lables {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.code {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}

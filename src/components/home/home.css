@@ -1,0 +1,68 @@
+.home-about {
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.625rem;
+  height: 80vh;
+  background-position: center;
+  background-image: url(../../assets/images/bg-blurs-mobile.png);
+}
+
+.about-title p:first-child {
+  font-style: normal;
+  font-weight: 450;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: var(--clr-text);
+}
+
+.about-title h1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.875rem;
+  line-height: 100%;
+  color: var(--clr-text);
+}
+
+.about-title p:nth-child(3) {
+  font-style: normal;
+  font-weight: 450;
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--clr-eucalyptus);
+}
+
+.about-content p:nth-child(1) {
+  display: none;
+}
+
+.about-content p:nth-child(1),
+p:nth-child(2) {
+  font-style: normal;
+  font-weight: 450;
+  font-size: 0.875rem;
+  line-height: 140%;
+  color: var(--clr-slate-gray);
+}
+
+.about-content p:nth-child(3) {
+  font-style: normal;
+  font-weight: 450;
+  font-size: 0.875rem;
+  line-height: 140%;
+}
+
+.sp-blue {
+  color: var(--clr-iris);
+}
+
+.sp-green {
+  color: var(--clr-eucalyptus);
+}
+
+.sp-rajah {
+  color: var(--clr-rajah);
+}
+
+.home-code {
+  display: none;
+}
