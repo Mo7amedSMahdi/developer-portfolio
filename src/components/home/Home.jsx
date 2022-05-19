@@ -9,7 +9,7 @@ import code5 from '../../assets/images/code-snippet-5.png';
 
 const Home = () => (
   <section className="home">
-    <Container>
+    <Container className="container flex flex--column">
       <div className="home-about flex flex--column">
         <div className="about-title flex flex--column">
           <p>Hi all, I am</p>
