@@ -2,6 +2,7 @@
   "name": "developer-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mo7amedsmahdi.github.io/developer-portfolio",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -10,6 +11,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^4.0.0",
     "prismjs": "^1.28.0",
     "react": "^18.1.0",
     "react-code-blocks": "^0.0.9-0",
@@ -22,6 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

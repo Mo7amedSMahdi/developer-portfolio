@@ -18,7 +18,7 @@ My personal website. It replicates Visual Studio Code.
 
 ## Live Demo
 
-> Coming Soon.
+[Checkout live Vrsion](https://mo7amedsmahdi.github.io/developer-portfolio/)
 
 ## Getting Started
 
