@@ -1,10 +1,24 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  --gap: 2rem;
+
+  background-position: center;
+  background-image: url(../../assets/images/bg-blurs-mobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .home-about {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 2.625rem;
   height: 80vh;
-  background-position: center;
-  background-image: url(../../assets/images/bg-blurs-mobile.png);
 }
 
 .about-title p:first-child {
@@ -65,4 +79,43 @@ p:nth-child(2) {
 
 .home-code {
   display: none;
+}
+
+@media screen and (min-width: 840px) {
+  .container {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-position: right;
+    background-image: url(../../assets/images/bg-blurs-main.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .home-about {
+    height: fit-content;
+    align-items: flex-start;
+
+    --gap: 5.063rem;
+  }
+
+  .about-title {
+    --gap: 0.5rem;
+  }
+
+  .home-code {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .about-content {
+    --gap: 0.5rem;
+  }
+
+  .about-content p:nth-child(1) {
+    display: inline-block;
+  }
 }
