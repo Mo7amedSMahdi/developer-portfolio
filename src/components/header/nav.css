@@ -39,6 +39,7 @@
 .nav-link {
   position: relative;
 }
+
 .nav-link::before {
   content: '';
   position: absolute;

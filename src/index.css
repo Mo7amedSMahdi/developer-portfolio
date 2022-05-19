@@ -6,7 +6,7 @@
   --clr-slate-gray: #607b96;
   --clr-zomp: #3c9d93;
   --clr-iris: #4d5bce;
-  --clr-white: #ffffff;
+  --clr-white: #fff;
   --clr-rajah: #fea55f;
   --clr-eucalyptus: #43d9ad;
   --clr-dark-salmon: #e99287;
@@ -15,7 +15,6 @@
   --clr-g-end: #43d9ad;
   --clr-lines: #1e2d3d;
   --clr-text: #e5e9f0;
-
   --ff-fira: 'Fira Code', monospace;
 }
 
