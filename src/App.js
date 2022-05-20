@@ -7,6 +7,7 @@ import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 
 import 'remixicon/fonts/remixicon.css';
+import 'animate.css';
 
 const App = () => (
   <Router>
