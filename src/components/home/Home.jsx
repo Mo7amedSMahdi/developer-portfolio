@@ -1,5 +1,4 @@
 import React from 'react';
-import anime from 'animejs/lib/anime.es.js';
 import './home.css';
 import Container from '@mui/material/Container';
 import code1 from '../../assets/images/code-snippet-1.png';
