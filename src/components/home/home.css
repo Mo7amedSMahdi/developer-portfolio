@@ -35,6 +35,8 @@
   font-size: 3.875rem;
   line-height: 100%;
   color: var(--clr-text);
+
+  --animate-duration: 0.5s;
 }
 
 .about-title p:nth-child(3) {
@@ -43,6 +45,7 @@
   font-size: 20px;
   line-height: 25px;
   color: var(--clr-eucalyptus);
+  --animate-duration: 1s;
 }
 
 .about-content p:nth-child(1) {
@@ -56,6 +59,7 @@ p:nth-child(2) {
   font-size: 0.875rem;
   line-height: 140%;
   color: var(--clr-slate-gray);
+  --animate-duration: 1.5s;
 }
 
 .about-content p:nth-child(3) {
@@ -63,6 +67,7 @@ p:nth-child(2) {
   font-weight: 450;
   font-size: 0.875rem;
   line-height: 140%;
+  --animate-duration: 2s;
 }
 
 .sp-blue {
