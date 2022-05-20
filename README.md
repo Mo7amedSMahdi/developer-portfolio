@@ -18,7 +18,7 @@ My personal website. It replicates Visual Studio Code.
 
 ## Live Demo
 
-[Checkout live Vrsion](https://mo7amedsmahdi.github.io/developer-portfolio/)
+[Checkout live Vrsion](https://spiffy-otter-4fa9c0.netlify.app/)
 
 ## Getting Started
 
