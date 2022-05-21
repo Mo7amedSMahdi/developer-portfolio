@@ -15,6 +15,8 @@
   --clr-g-end: #43d9ad;
   --clr-lines: #1e2d3d;
   --clr-text: #e5e9f0;
+  --clr-blue: #3a49a4;
+  --clr-gray: #81a1c1;
 
   --ff-fira: 'Fira Code', monospace;
 }
@@ -224,4 +226,28 @@ section {
 .code {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.icon--red {
+  color: var(--clr-dark-salmon);
+}
+
+.icon--green {
+  color: var(--clr-eucalyptus);
+}
+
+.icon--blue {
+  color: var(--clr-blue);
+}
+
+.icon--gray {
+  color: var(--clr-gray);
+}
+
+.icon--lavender {
+  color: var(--clr-bright-lavender);
+}
+
+.white {
+  color: var(--clr-white) !important;
 }

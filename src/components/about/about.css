@@ -1,0 +1,52 @@
+pre {
+  background: black !important;
+  font-family: var(--ff-fira) !important;
+  color: #607b96 !important;
+}
+code {
+  font-famly: var(--ff-fira) !important;
+  color: #607b96 !important;
+}
+
+.side-container {
+  max-width: 20%;
+  padding-block: 1.063rem;
+}
+
+.side-icons {
+  --gap: 2rem;
+  color: var(--clr-slate-gray);
+  font-size: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.explorer {
+  width: 100%;
+  min-width: max-content;
+
+  --gap: 1.688rem;
+}
+
+.explorer-section {
+  --gap: 1.063rem;
+}
+
+.explorer-title {
+  color: var(--clr-white);
+}
+
+.explorer-title p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: var(--clr-white);
+}
+
+.accordion-body {
+  margin-inline-start: 2rem;
+}
+
+.accordion-header {
+  cursor: pointer;
+}
