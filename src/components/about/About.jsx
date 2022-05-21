@@ -1,87 +1,32 @@
-import React from 'react';
-// import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-// import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import './about.css';
 import Accordion from '../global/accordion';
+import CodeSnippet from '../global/codeSnippet';
 
 const about = () => {
-  const personalInfo = [
-    {
-      title: 'bio',
-      files: [
-        {
-          fileName: 'bio-informaion',
-        },
-      ],
-      iconColor: 'icon--red',
-      isFolder: true,
-    },
-    {
-      title: 'education',
-      files: [
-        {
-          fileName: 'university',
-        },
-      ],
-      iconColor: 'icon--green',
-      isFolder: true,
-    },
-    {
-      title: 'intersets',
-      files: [
-        {
-          fileName: 'my-interests',
-        },
-      ],
-      iconColor: 'icon--blue',
-      isFolder: true,
-    },
-    {
-      title: 'experience',
-      files: [
-        {
-          fileName: 'work-experience',
-        },
-        {
-          fileName: 'bootcamps',
-        },
-      ],
-      iconColor: 'icon--lavender',
-      isFolder: true,
-    },
-  ];
+  const about = useSelector((state) => state.aboutReducer);
 
-  const contact = [
-    {
-      files: [
-        {
-          fileName: 'mo7amed.salah@outlook.com',
-        },
-        {
-          fileName: '+964 770 208 4329',
-        },
-      ],
-      isFolder: false,
-    },
-  ];
+  const code = `/**
+ * About me
+ * I have 5 years of еxperience in web
+ * development lorem ipsum dolor sit amet, 
+ * consectetur adipiscing elit, sed do eiusmod
+ * tempor incididunt ut labore et dolore
+ * magna aliqua. Ut enim ad minim veniam,
+ * quis nostrud exercitation ullamco laboris
+ * nisi ut aliquip ex ea commodo consequat.
+ * Duis aute irure dolor in reprehenderit in
+ *
+ * Duis aute irure dolor in reprehenderit in
+ * voluptate velit esse cillum dolore eu fugiat 
+ * nulla pariatur. Excepteur sint occaecat 
+ * officia deserunt mollit anim id est laborum.
+ */`;
+
   return (
-    //   const code = `export const getMissions = () => async (dispatch, getState) => {
-    //   const { lastFetch } = getState().missions;
-
-    //   const diffInMinutes = moment().diff(moment(lastFetch), 'minutes');
-    //   if (diffInMinutes < 10) return;
-    //   dispatch(
-    //     apiCallBegan({
-    //       url,
-    //       onStart: missionsRequested.type,
-    //       onSuccess: missionsRecieved.type,
-    //       onError: missionsRequestFailed.type,
-    //     }),
-    //   );
-    // `;
-    // <SyntaxHighlighter language="javascript" style={nightOwl}>
-    //   {code}
-    // </SyntaxHighlighter>
     <section className="about flex">
       <div className="side-container flex">
         <div className="side-icons flex flex--column">
@@ -96,12 +41,17 @@ const about = () => {
               <p>personal-info</p>
             </div>
             <div className="side-accordions flex flex--column">
-              {personalInfo.map((accordion, index) => {
-                <Accordion folder={accordion.iconColor} isActive={index === 0 ? true : false} isFolder={true} accordion={accordion.files} />;
+              {about.personalInfo.map((accordion, index) => {
+                return (
+                  <Accordion
+                    key={accordion.id}
+                    folder={accordion.iconColor}
+                    isActive={index === 0 ? true : false}
+                    isFolder={accordion.isFolder}
+                    accordion={accordion}
+                  />
+                );
               })}
-
-              <Accordion folder="icon--green" isFolder={true} />
-              <Accordion folder="icon--blue" isFolder={true} />
             </div>
           </div>
           <div className="explorer-section flex flex--column">
@@ -110,9 +60,29 @@ const about = () => {
               <p>contacts</p>
             </div>
             <div className="side-accordions flex flex--column">
-              <Accordion folder="icon--red" isFolder={false} isActive={true} accordion={contact.files} />
+              <Accordion isFolder={about.contactInfo.isFolder} isActive={true} accordion={about.contactInfo} />
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="about-body flex flex--column">
+        <div className="body-title flex">
+          <p>{about.activeTab.tabTitle}</p>
+          <i className="ri-close-fill icon--gray" />
+        </div>
+        <SyntaxHighlighter language="javascript" style={nightOwl} showLineNumbers={true}>
+          {about.activeTab.description}
+        </SyntaxHighlighter>
+      </div>
+
+      <div className="code-snippets flex flex--column">
+        <div className="title">
+          <p>&#47;&#47;Code snippet showcase:</p>
+        </div>
+        <div className="codes-showcase flex flex--column">
+          <CodeSnippet />
+          <CodeSnippet />
         </div>
       </div>
     </section>
