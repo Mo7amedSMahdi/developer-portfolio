@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import './about.css';
 import Accordion from '../global/accordion';
 import CodeSnippet from '../global/codeSnippet';
+import useWindowDimensions from '../global/useWindowDimensions';
 
 const about = () => {
   const about = useSelector((state) => state.aboutReducer);
@@ -65,24 +66,31 @@ const about = () => {
           </div>
         </div>
       </div>
-
-      <div className="about-body flex flex--column">
-        <div className="body-title flex">
-          <p>{about.activeTab.tabTitle}</p>
-          <i className="ri-close-fill icon--gray" />
+      <div className="showcase flex">
+        <div className="about-body flex flex--column">
+          <div className="body-title flex">
+            <p>{about.activeTab.tabTitle}</p>
+            <i className="ri-close-fill icon--gray" />
+          </div>
+          {useWindowDimensions().width > 768 ? (
+            <SyntaxHighlighter language="javascript" style={nightOwl} showLineNumbers={true}>
+              {about.activeTab.description}
+            </SyntaxHighlighter>
+          ) : (
+            <SyntaxHighlighter language="javascript" style={nightOwl} showLineNumbers={false} wrapLines={true} wrapLongLines={true}>
+              {about.activeTab.description}
+            </SyntaxHighlighter>
+          )}
         </div>
-        <SyntaxHighlighter language="javascript" style={nightOwl} showLineNumbers={true}>
-          {about.activeTab.description}
-        </SyntaxHighlighter>
-      </div>
 
-      <div className="code-snippets flex flex--column">
-        <div className="title">
-          <p>&#47;&#47;Code snippet showcase:</p>
-        </div>
-        <div className="codes-showcase flex flex--column">
-          <CodeSnippet />
-          <CodeSnippet />
+        <div className="code-snippets flex flex--column">
+          <div className="title">
+            <p>&#47;&#47;Code snippet showcase:</p>
+          </div>
+          <div className="codes-showcase flex flex--column">
+            <CodeSnippet />
+            <CodeSnippet />
+          </div>
         </div>
       </div>
     </section>

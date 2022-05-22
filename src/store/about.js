@@ -22,15 +22,11 @@ const personalInfo = [
   },
   {
     id: uuidv4(),
-    title: 'intersets',
-    tabs: [{ id: uuidv4(), description: aboutData.INTERESTS, tabTitle: 'my-interests' }],
-    iconColor: 'icon--blue',
-    isFolder: true,
-  },
-  {
-    id: uuidv4(),
     title: 'experience',
-    tabs: [{ id: uuidv4(), description: aboutData.WORK_EXPERIENCE, tabTitle: 'work-experience' }],
+    tabs: [
+      { id: uuidv4(), description: aboutData.WORK_EXPERIENCE, tabTitle: 'work-experience' },
+      { id: uuidv4(), description: aboutData.SKILLS, tabTitle: 'skills' },
+    ],
     iconColor: 'icon--lavender',
     isFolder: true,
   },

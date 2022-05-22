@@ -25,11 +25,11 @@ const codeSnippet = () => {
         <div className="actions">
           <ul>
             <li>
-              <i class="ri-chat-smile-3-fill icon--gray" />
+              <i className="ri-chat-smile-3-fill icon--gray" />
               <p>details</p>
             </li>
             <li>
-              <i class="ri-star-fill icon--gray" />
+              <i className="ri-star-fill icon--gray" />
               <p>3</p>
               <p>Stars</p>
             </li>
