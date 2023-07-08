@@ -1,13 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Nav from './components/header/Nav';
-import Home from './components/home/Home';
-import About from './components/about/About';
-import Projects from './components/projects/Projects';
-import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Nav from "./components/header/Nav";
+import Home from "./components/home/Home";
+import About from "./components/about/About";
+import Projects from "./components/projects/Projects";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
 
-import 'remixicon/fonts/remixicon.css';
-import 'animate.css';
+import "remixicon/fonts/remixicon.css";
+import "animate.css";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
     </Router>
