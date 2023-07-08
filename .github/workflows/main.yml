@@ -25,5 +25,5 @@ jobs:
         uses: docker://ghcr.io/Mo7amedSMahdi/gpt-pr-description:latest
         with:
           env:
-            INPUT_GITHUB_TOKEN: ${{ secrets.API_TOKEN }}
+            INPUT_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             INPUT_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
