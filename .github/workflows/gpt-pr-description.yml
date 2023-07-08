@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: Mo7amedSMahdi/gpt-pr-description@alpha-1
+      - uses: Mo7amedSMahdi/gpt-pr-description@alpha-2
         with:
           github_token: ${{ secrets.API_TOKEN }}
           openai_api_key: ${{ secrets.OPENAI_API_KEY }}
