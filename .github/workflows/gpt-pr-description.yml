@@ -1,2 +1,13 @@
-- name: GPT3 PR Description with OpenAI
-  uses: Mo7amedSMahdi/gpt-pr-description@alpha-1
+name: GPT3 PR Description with OpenAI
+
+on: pull_request
+
+jobs:
+  openai-pr-description:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: Mo7amedSMahdi/gpt-pr-description@alpha-1
+        with:
+          github_token: ${{ secrets.API_TOKEN }}
+          openai_api_key: ${{ secrets.OPENAI_API_KEY }}
