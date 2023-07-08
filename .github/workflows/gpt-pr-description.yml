@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: docker://ghcr.io/Mo7amedSMahdi/gpt-pr-description:latest
+      - uses: docker://ghcr.io/mo7amedsmahdi/gpt-pr-description:latest
         with:
           github_token: ${{ secrets.API_TOKEN }}
           openai_api_key: ${{ secrets.OPENAI_API_KEY }}
