@@ -1,13 +1,26 @@
 name: GPT PR description
 
-on: pull_request
+on:
+  pull_request:
+    types:
+      - opened
 
 jobs:
-  gpt-pr-description:
-    runs-on: ubuntu-22.04
+  generate-pr-description:
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: Mo7amedSMahdi/gpt-pr-description@main
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          github_token: ${{ secrets.API_TOKEN }}
-          openai_api_key: ${{ secrets.OPENAI_API_KEY }}
+          python-version: 3.11
+
+      - name: Build and run Docker container
+        uses: docker://ghcr.io/Mo7amedSMahdi/gpt-pr-description:latest
+        with:
+          env:
+            INPUT_GITHUB_TOKEN: ${{ secrets.API_TOKEN }}
+            INPUT_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
