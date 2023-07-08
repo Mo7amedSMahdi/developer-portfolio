@@ -1,4 +1,4 @@
-name: Autofill PR description
+name: GPT PR description
 
 on: pull_request
 
