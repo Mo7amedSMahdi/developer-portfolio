@@ -1,0 +1,13 @@
+name: GPT PR description
+
+on: pull_request
+
+jobs:
+  openai-pr-description:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: docker://ghcr.io/Mo7amedSMahdi/gpt-pr-description:latest
+        with:
+          github_token: ${{ secrets.API_TOKEN }}
+          openai_api_key: ${{ secrets.OPENAI_API_KEY }}
