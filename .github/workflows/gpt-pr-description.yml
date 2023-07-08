@@ -3,7 +3,7 @@ name: GPT PR description
 on: pull_request
 
 jobs:
-  openai-pr-description:
+  gpt-pr-description:
     runs-on: ubuntu-22.04
 
     steps:
