@@ -1,9 +1,6 @@
 name: GPT PR description
 
-on:
-  pull_request:
-    types:
-      - opened
+on: pull_request
 
 jobs:
   generate-pr-description:
