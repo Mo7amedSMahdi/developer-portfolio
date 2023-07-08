@@ -1,20 +1,2 @@
-name: GPT PR description
-
-on:
-  pull_request:
-
-jobs:
-  openai-pr-description:
-    runs-on: ubuntu-22.04
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Run Docker image
-        run: |
-          docker pull ghcr.io/mo7amedsmahdi/gpt-pr-description:latest
-          docker run --rm \
-            -e GITHUB_TOKEN=${{ secrets.API_TOKEN }} \
-            -e OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} \
-            ghcr.io/mo7amedsmahdi/gpt-pr-description:latest
+- name: GPT3 PR Description with OpenAI
+  uses: Mo7amedSMahdi/gpt-pr-description@alpha-1
